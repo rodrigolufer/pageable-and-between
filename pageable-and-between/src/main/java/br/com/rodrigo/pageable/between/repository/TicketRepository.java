@@ -12,7 +12,5 @@ import br.com.rodrigo.pageable.between.model.Ticket;
 @Repository
 public interface TicketRepository extends PagingAndSortingRepository<Ticket, Long> {
 	
-	public abstract Page<Ticket> findAll(final Pageable pageable);
-	
 	public abstract Page<Ticket> findByOpeningBetween(final LocalDateTime start, final LocalDateTime end, final Pageable pageable);
 }
